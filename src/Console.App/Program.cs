@@ -15,14 +15,7 @@ public static class Program
     static string KycTool(
         [Description("The CPF formated or unformatted")] string cpf)
     {
-        if (cpf == "123.456.789-00")
-        {
-            return "Approved";
-        }
-        else
-        {
-            return "Rejected";
-        }
+        return cpf == "123.456.789-00" ? "Approved" : "Rejected";
     }
 
     [Description("Assess fraud risk for a credit application")]
